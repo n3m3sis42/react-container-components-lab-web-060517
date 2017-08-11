@@ -31,7 +31,6 @@ class SearchableMovieReviewsContainer extends Component {
     else {
       URL = BASE_URL+ AUTH_PARAM
     }
-    console.log(URL)
     fetch(URL)
       .then(response => response.json())
       .then((reviews => this.setState({ reviews: reviews.results })));
